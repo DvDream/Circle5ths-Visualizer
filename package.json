@@ -5,8 +5,8 @@
   "author": "Davide Mori",
   "license": "MIT",
   "scripts": {
-    "start": "parcel Keyboard_HTML.html",
-    "build": "parcel build Keyboard_HTML.html --public-url ./"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
   },
   "dependencies": {
     "js": "^0.1.0"
