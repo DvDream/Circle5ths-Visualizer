@@ -1,0 +1,14 @@
+{
+  "name": "Circle-Visualizer",
+  "version": "1.0.0",
+  "main": "Keyboard_JS.js",
+  "author": "Davide Mori",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel Keyboard_HTML.html",
+    "build": "parcel build Keyboard_HTML.html --public-url ./"
+  },
+  "dependencies": {
+    "js": "^0.1.0"
+  }
+}
