@@ -115,7 +115,7 @@ p1 {
   width: 1400px;
   position: relative;
   display:inline-flex;
-
+  right:25px;
   top:5px;
 }
 
