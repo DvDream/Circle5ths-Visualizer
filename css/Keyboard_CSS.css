@@ -118,7 +118,7 @@ p1 {
   position: relative;
   display:flex;
   right:37px;
-  top:35px;
+  top:16px;
 }
 
 .rect_white{
@@ -225,9 +225,9 @@ input[type=range] {
   margin: 10px 0;
   width: 150px;
   position: absolute;
-  left:1055px;
+  left:1050px;
   transform: rotate(-90deg);
-  bottom: 30px;
+  bottom: 408px;
   border-radius: 20px;
 }
 input[type=range]:focus {
