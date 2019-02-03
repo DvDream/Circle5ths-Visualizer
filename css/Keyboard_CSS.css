@@ -30,7 +30,7 @@ canvas{
 
 }
 .display{
-  display:
+  display:inline-block;
 
   position: relative;
   background-color: transparent;
