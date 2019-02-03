@@ -112,20 +112,20 @@ p1 {
   border:5px solid #14fdce;
 }
 .bar_white{
-  width: 100%;
+  width: 1400px;
   position: relative;
-  display: inline-flex;
+  display:inline-flex;
 
   top:5px;
 }
 
 .rect_white{
-  padding: 1%;
+  padding: 15px;
   display: inline-flex;
   background-color: white;
   width: 60px;
   height: 200px;
-  border-radius: 5%;
+  border-radius: 5px;
   border: 2px solid black;
 }
 
@@ -193,7 +193,7 @@ p1 {
 }
 
 #C-second{
-  right: 575px;
+  right: 625px;
 }
 
 .octave{
@@ -221,18 +221,18 @@ p1 {
 input[type=range] {
   -webkit-appearance: none;
   margin: 10px 0;
-  width: 10%;
+  width: 150px;
   position: absolute;
-  left:1065px;
+  left:1055px;
   transform: rotate(-90deg);
-  bottom: 20px;
+  bottom: 100px;
   border-radius: 20px;
 }
 input[type=range]:focus {
   outline: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
-  width: 30%;
+  width: 12px;
   height: 12px;
   cursor: pointer;
   animate: 0.2s;
@@ -257,7 +257,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border: 1px solid  #FFFAFA;
 }
 input[type=range]::-moz-range-track {
-  width: 100%;
+  width: 150px;
   height: 5px;
   cursor: pointer;
   animate: 0.2s;
@@ -276,7 +276,7 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
 }
 input[type=range]::-ms-track {
-  width: 100%;
+  width: 150px;
   height: 5px;
   cursor: pointer;
   animate: 0.2s;
@@ -315,18 +315,17 @@ input[type=range]:focus::-ms-fill-upper {
 
 .stripes_white{
   background-color: red;
-  width: 86px;
+  width: 90px;
   height: 18px;
   position:absolute;
   top: 145px;
-  transform: translate(-13px);
   pointer-events:none;
-
+left:32px;
 }
 
 .stripes_black{
   background-color: red;
-  width: 38px;
+  width: 50px;
   height: 20px;
   top: 30px;
   position:absolute;
@@ -337,37 +336,36 @@ input[type=range]:focus::-ms-fill-upper {
   visibility: hidden;
 }
 
- #D{
-left:134px;
-width: 85px;
+#D{
+left:125px;
+/*width: 85px;*/
   visibility: hidden;
 }
 
 #E{
- left:223px;
-width: 74px;
+ left:220px;
+/*width: 74px;*/
  visibility: hidden;
 }
 #F{
-
   visibility: hidden;
-width:85px;
- left:301px;
+/*width:85px;*/
+ left:313px;
 }
 #G{
- left:390px;
-width: 85px;
+ left:408px;
+/*width: 85px;*/
  visibility: hidden;
 }
 #A{
-  width: 85px;
- left:479px;
+  /*width: 85px;*/
+ left:502px;
 
  visibility: hidden;
 }
-#B{
- left:568px;
-width:75px;
+#B.stripes_white{
+ left:595px;
+/*width:75px;*/
  visibility: hidden;
 }
 
@@ -391,14 +389,14 @@ visibility: hidden;
 
 }
  #Ab{
-  width:50px;
+ width:50px;
 
   visibility: hidden;
 
 
 }
  #Bb{
-  width:50px;
+  width:49px;
 
   visibility: hidden;
 
