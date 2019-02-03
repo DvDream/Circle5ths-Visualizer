@@ -225,7 +225,7 @@ input[type=range] {
   position: absolute;
   left:1055px;
   transform: rotate(-90deg);
-  bottom: 50px;
+  bottom: 40px;
   border-radius: 20px;
 }
 input[type=range]:focus {
