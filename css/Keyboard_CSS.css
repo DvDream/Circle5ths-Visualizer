@@ -30,8 +30,7 @@ canvas{
 
 }
 .display{
-  display:inline-block;
-
+  
   position: relative;
   background-color: transparent;
   width: 700px;
@@ -155,7 +154,6 @@ p1 {
 }
 
 .mini_keyboard{
-  display: inline-block;
   position: relative;
   width: 700px;;
   height: 90px;
