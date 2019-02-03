@@ -30,14 +30,14 @@ canvas{
 
 }
 .display{
-  
+
   position: relative;
   background-color: transparent;
   width: 700px;
   height: 90px;
   /*top:25px;*/
   top:6px;
-  left:280px;
+  left:290px;
   border: 0.5rem solid;
   box-shadow:
     inset 0 0 18rem #615c5c,
@@ -120,6 +120,8 @@ p1 {
   display:flex;
   right:37px;
   top:16px;
+  transform: scale(0.9);
+
 }
 
 .rect_white{
@@ -158,7 +160,7 @@ p1 {
   width: 700px;;
   height: 90px;
   top:14px;
-  left:280px;
+  left:290px;
   border: 0.5rem solid;
   box-shadow:
     inset 0 0 18rem black,
