@@ -114,11 +114,11 @@ p1 {
   border:5px solid #14fdce;
 }
 .bar_white{
-  width: 1400px;
+  width: 1375px;
   position: relative;
-  display:inline-flex;
-  right:25px;
-  top:5px;
+  display:inline-block;
+  right:37px;
+  top:35px;
 }
 
 .rect_white{
