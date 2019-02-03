@@ -116,7 +116,7 @@ p1 {
 .bar_white{
   width: 1375px;
   position: relative;
-  display:inline-block;
+  display:flex;
   right:37px;
   top:35px;
 }
