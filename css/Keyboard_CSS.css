@@ -1,8 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=VT323);
 @import url(https://fonts.googleapis.com/css?family=Prompt);
-.tutto{
-  position: sticky;
-}
+
 canvas{
   border: 5px solid grey;
   background: black;
