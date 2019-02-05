@@ -368,7 +368,7 @@ function detect_chord(midi_num){
       blink(color_chord);
       var chiave= findKey(accordo,counter,chords_vec);
       console.log(chiave);
-      render(chords_vec,key_minor_arr);  //VISUALIZZA SULLO SCHERMO
+      render(chords_vec,chiave+key_minor_arr);  //VISUALIZZA SULLO SCHERMO
       scale(chiave);
 
 
