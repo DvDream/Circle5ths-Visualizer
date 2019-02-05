@@ -1,5 +1,5 @@
-export var circle = [];
-circle.push(["Fmaj7","Cmaj7", "G7","Dm7", "Am7","Em7", "Bsemi"]);
+export var circle = [["Fmaj7","Cmaj7", "G7","Dm7", "Am7","Em7", "Bsemi"],["Cmaj7","Gmaj7", "D7","Am7", "Em7","Bm7", "F#semi"],["Gmaj7","Dmaj7", "A7","Em7", "Bm7","F#m7",  "C#semi"],[ "Dmaj7","Amaj7","E7","Bm7", "F#m7","C#m7",  "G#semi"],[ "Amaj7","Emaj7", "B7","F#m7","C#m7","G#m7",  "D#semi"],["Emaj7","Bmaj7","F#7","C#m7","G#m7","D#m7", "A#semi"],[ "Bmaj7","F#maj7","C#7","G#m7","D#m7","A#m7", "Fsemi"],["F#maj7","C#maj7","G#7","D#m7","A#m7","Fm7", "Csemi"],["C#maj7","G#maj7",  "D#7","A#m7", "Fm7","Cm7", "Gsemi"],[ "G#maj7","D#maj7", "A#7","Fm7","Cm7","Gm7",  "Dsemi"],[ "D#maj7","A#maj7", "F7","Cm7", "Gm7","Dm7", "Asemi"],["A#maj7","Fmaj7", "C7","Gm7",  "Dm7","Am7", "Esemi"]];
+/*circle.push(["Fmaj7","Cmaj7", "G7","Dm7", "Am7","Em7", "Bsemi"]);
 circle.push(["Cmaj7","Gmaj7", "D7","Am7", "Em7","Bm7", "F#semi"]);
 circle.push(["Gmaj7","Dmaj7", "A7","Em7", "Bm7","F#m7",  "C#semi"]);
 circle.push([ "Dmaj7","Amaj7","E7","Bm7", "F#m7","C#m7",  "G#semi"]);
@@ -10,7 +10,7 @@ circle.push(["F#maj7","C#maj7","G#7","D#m7","A#m7","Fm7", "Csemi"]);
 circle.push(["C#maj7","G#maj7",  "D#7","A#m7", "Fm7","Cm7", "Gsemi"]);
 circle.push([ "G#maj7","D#maj7", "A#7","Fm7","Cm7","Gm7",  "Dsemi"]);
 circle.push([ "D#maj7","A#maj7", "F7","Cm7", "Gm7","Dm7", "Asemi"]);
-circle.push(["A#maj7","Fmaj7", "C7","Gm7",  "Dm7","Am7", "Esemi"]);
+circle.push(["A#maj7","Fmaj7", "C7","Gm7",  "Dm7","Am7", "Esemi"]);*/
 import {stato,cancel_stato} from "./canvas.js";
 import {canvas  as canvas2,show_progression,change_progression} from "./canvas_progression.js";
 import {ctx as ctx2}  from "./canvas_progression.js";

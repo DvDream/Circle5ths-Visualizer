@@ -4,7 +4,7 @@ var midi;
 var c = new AudioContext();
 var analyser = c.createAnalyser();
 var volume_master= c.createGain();
-
+var chiave;
 volume_master.connect(c.destination);
 
 
@@ -366,7 +366,8 @@ function detect_chord(midi_num){
       chords_vec.push(chord_);
       find_indexes(accordo);
       blink(color_chord);
-      var chiave= findKey(accordo,counter,chords_vec);
+
+      chiave= findKey(accordo,counter,chords_vec);
   //    console.log(chiave);
       render(chords_vec,chiave);  //VISUALIZZA SULLO SCHERMO
       scale(chiave);
