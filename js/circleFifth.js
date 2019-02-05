@@ -154,7 +154,7 @@ function minor_relative(key_arr){
 var index;
   for(var i=0; i<key_arr.length; i++){
     index=key_.indexOf(key_arr[i]);
-    key_minor_arr.push(key_minor[index]);
+    key_minor_arr.push(key_arr[i]+'/'+key_minor[index]);
   }
   console.log(key_minor_arr);
 }
