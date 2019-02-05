@@ -2,10 +2,11 @@
 
 
 
-1. Behind the concept
+### 1. Behind the concept
 
 The aim of the “Circle Visualizer” project is to provide an innovative way to visualize music, highlighting the harmonic relations in a chord progression. The studies behind harmony look into the “Circle of fifths” which represent all the notes from the chromatic scale spaced by fifth intervals: through that, it can be seen what are and how many are the chords and the alterations for each key.
 
+<img src="Readme_images/10.png" style="float:center"></img>
 Fig.1 Circle of fifths
 
 Therefore, the circle of fifths is a useful tool to find the key from a chord progression. The concept behind that is to represent it as an open cylinder (Fig.2), in which on the base are located all the 12 notes from the chromatic scale spaced by fifths, and 
