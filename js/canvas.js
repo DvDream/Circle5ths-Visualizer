@@ -53,15 +53,15 @@ export function blink(arr, chords_vec){
     ctx.fillStyle="black";
     ctx.font = "20px VT323"
     ctx.fillText(matrix[x_canv][y_canv][2], matrix[x_canv][y_canv][0]+5,matrix[x_canv][y_canv][1]+18);
-    console.log("CHORDS_VEC",matrix[0][0][2]);
+    //console.log("CHORDS_VEC",matrix[0][0][2]);
 
     }
 
-console.log("stato", stato.xy);
+//console.log("stato", stato.xy);
 }
 
 export function cancel_stato(){
   stato.xy= [];
   stato.alpha=[]
-  console.log(stato.xy);
+//  console.log(stato.xy);
 }

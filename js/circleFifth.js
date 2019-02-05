@@ -35,7 +35,7 @@ export function findKey(c,vec1,vec2){
     vec1[i]++;
   }
   var vec_max = Math.max.apply(Math,vec1);
-  console.log("vec_max ",vec_max);
+  //console.log("vec_max ",vec_max);
   if(vec2.length==4){
 
     var indexes = [], j = -1;
@@ -79,7 +79,7 @@ function find_degrees(state, indexes){
      }
    }
  }
- console.log("modi",degree);
+ //console.log("modi",degree);
 }
 
 

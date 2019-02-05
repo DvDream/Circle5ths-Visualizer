@@ -216,7 +216,7 @@ function choose_position(value){
         ctx.fill();
         ctx.font = "20px Arial";
         ctx.fillText("VI - Aeolian", 10, 9*stepy/2);
-        console.log('dovrei aver disegnato il quadrato a ', stepx,stepy, y0);
+    //    console.log('dovrei aver disegnato il quadrato a ', stepx,stepy, y0);
         break;
 
         case 5:
@@ -300,7 +300,7 @@ ctx.strokeStyle= 'white';
 ctx.stroke();
 
 var tg=(2*velocity[k]*Math.sin(angle))/g;  //TEMPO CHE OGNI LINEA IMPIEGA PER RAGGIUNGERE IL PUNTO D'ARRIVO
-console.log("cappa",k);
+//console.log("cappa",k);
  if(time>tg){                             //CONTROLLO CHE FERMA LA LINEA AL PUNTO FINALE E AGGIORNA IL NUOVO PUNTO INIZIALE CON QUELLO FINALE PRECEDENTE
     k=k+1;
     clearInterval(value);

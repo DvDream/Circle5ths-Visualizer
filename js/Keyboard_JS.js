@@ -127,7 +127,7 @@ document.getElementsByClassName("Key")[0].innerHTML= "";
   i=0;
   chords_vec=[];
   counter.fill(0);
-  console.log(chords_vec);
+//  console.log(chords_vec);
   color_chord=[];
   ctx.clearRect(0,0,canvas.width,canvas.height);
   ctx2.clearRect(0,0,canvas2.width,canvas2.height);
@@ -149,7 +149,7 @@ $(document).ready(function() {
       if(octave_step<-36){                  //controllo che impedisce l'aumento dell'ottava anche se il riquadro sta fermo
         octave_step=-36;
       }
-      console.log(octave_step);
+    //  console.log(octave_step);
 
       switch(octave_step){
         case 12: document.getElementById("C-first").innerHTML= "C5";
@@ -193,7 +193,7 @@ $(document).ready(function() {
         octave_step=octave_step-12;
       }
         octave_step= octave_step+12;
-      console.log(octave_step);
+    //  console.log(octave_step);
 
       switch(octave_step){
         case 0: document.getElementById("C-first").innerHTML= "C4";
@@ -367,12 +367,12 @@ function detect_chord(midi_num){
       find_indexes(accordo);
       blink(color_chord);
       var chiave= findKey(accordo,counter,chords_vec);
-      console.log(chiave);
+  //    console.log(chiave);
       render(chords_vec,chiave);  //VISUALIZZA SULLO SCHERMO
       scale(chiave);
 
 
-      console.log(chords_vec);
+    //  console.log(chords_vec);
 
   }
 }
@@ -387,7 +387,7 @@ for(var i=0; i<circle.length; i++){
          }
          }
 }
-   console.log("color chord",color_chord);
+   //console.log("color chord",color_chord);
 }
 
 
@@ -408,7 +408,7 @@ function scale(key_arr){
         if(index_maj>=chromatic_scale.length){
           index_maj=index_maj%chromatic_scale.length;
         }
-        console.log(index_maj);
+      //  console.log(index_maj);
 
         if(chromatic_scale[index_maj].includes("#")){
           appoggio=chromatic_scale[index_maj].replace("/","_")
@@ -419,7 +419,7 @@ function scale(key_arr){
 
       }
   scale_maj.push(arr);
-  console.log(scale_maj);
+//  console.log(scale_maj);
   arr=[];
   //    console.log(scale_min);
   }
@@ -427,7 +427,7 @@ function scale(key_arr){
   for(var i=0; i<scale_maj[change_scale].length;i++){
          $("#"+scale_maj[change_scale][i]).css("visibility", "visible");
     }
-  console.log(scale_maj);
+//  console.log(scale_maj);
 }
 
 function drawSamples(){
