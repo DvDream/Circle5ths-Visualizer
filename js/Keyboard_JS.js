@@ -76,7 +76,7 @@ function render(vec,key){
   x[i].style.verticalAlign = 'middle';
   x[i].style.fontFamily = 'Prompt';
   if(chords_vec.length==4){
-    y[0].innerHTML = key+key_minor_arr;
+    y[0].innerHTML = key+"/"+key_minor_arr;
     y[0].style.color = "#14fdce";
     y[0].style.textAlign = "center";
     y[0].style.top= "50px";
