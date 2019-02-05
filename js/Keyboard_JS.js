@@ -27,7 +27,7 @@ import { Note, Chord } from "./tonal";
 import {canvas, ctx, my_gradient, blink } from "./canvas.js";
 import {canvas  as canvas2, reset_canvas2,split_array} from "./canvas_progression.js";
 import {ctx as ctx2}  from "./canvas_progression.js";
-import {circle, key_, findKey,degree} from "./circleFifth.js";
+import {circle, key_, findKey,degree,key_minor_arr} from "./circleFifth.js";
 var counter = new Array(circle.length).fill(0);
 var octave_step=0;
 var color_chord= [];
@@ -76,7 +76,7 @@ function render(vec,key){
   x[i].style.verticalAlign = 'middle';
   x[i].style.fontFamily = 'Prompt';
   if(chords_vec.length==4){
-    y[0].innerHTML = key;
+    y[0].innerHTML = key+key_minor_arr;
     y[0].style.color = "#14fdce";
     y[0].style.textAlign = "center";
     y[0].style.top= "50px";
