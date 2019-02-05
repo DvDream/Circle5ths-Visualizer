@@ -15,7 +15,7 @@ import {stato,cancel_stato} from "./canvas.js";
 import {canvas  as canvas2,show_progression,change_progression} from "./canvas_progression.js";
 import {ctx as ctx2}  from "./canvas_progression.js";
 export var key_ = ["C","G","D","A","E","B","Gb/F#","Db/C#","Ab","Eb","Bb","F"];
-export key_minor_arr=[];
+export var key_minor_arr=[];
 export var degree= [];
 var i=0;
 var end=0;
