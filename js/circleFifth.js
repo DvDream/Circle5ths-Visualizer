@@ -14,7 +14,7 @@ circle.push(["A#maj7","Fmaj7", "C7","Gm7",  "Dm7","Am7", "Esemi"]);
 import {stato,cancel_stato} from "./canvas.js";
 import {canvas  as canvas2,show_progression,change_progression} from "./canvas_progression.js";
 import {ctx as ctx2}  from "./canvas_progression.js";
-export var key_ = ["C","G","D","A","E","B","Gb/F#","Db/C#","Ab","Eb","Bb","F"];
+export var key_ = ["C/Am","G/Em","D/Bm","A/Gbm","E/Dbm","B/Abm","Gb/Ebm","Db/Bbm","Ab/Fm","Eb/Cm","Bb/Gm","F/Dm"];
 export var degree= [];
 var i=0;
 var end=0;
