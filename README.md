@@ -6,7 +6,7 @@
 
 The aim of the “Circle Visualizer” project is to provide an innovative way to visualize music, highlighting the harmonic relations in a chord progression. The studies behind harmony look into the “Circle of fifths” which represent all the notes from the chromatic scale spaced by fifth intervals: through that, it can be seen what are and how many are the chords and the alterations for each key.
 
-<img src="Readme_images/circle.PNG" style= "text-align=center">
+<img src="Readme_images/circle.PNG" style= "align:center">
 
 ***Fig.1** Circle of fifths*
 
@@ -17,7 +17,7 @@ For this version it has been decided to limit the choice of the key based only o
 
 
            
-     
+<img src="Readme_images/unnamed.jpg" style= "align:center">
 	
 ***Fig.2** Modal circle of fifths*
 	
@@ -47,6 +47,7 @@ To this point, the playNote function is called, which generates the oscillators 
 
 More types of music visualization has been provided, in real time or not, to show the harmonic but also typical aspects of the audio signal as a wave.
 
+<img src="Readme_images/3.png" style= "align:center">
 
 ***Fig.3** Keyboard, display and frequency spectrum*
 
