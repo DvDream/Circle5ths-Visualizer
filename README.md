@@ -2,12 +2,11 @@
 
 
 
-### 1. Behind the concept
+## 1. Behind the concept
 
 The aim of the “Circle Visualizer” project is to provide an innovative way to visualize music, highlighting the harmonic relations in a chord progression. The studies behind harmony look into the “Circle of fifths” which represent all the notes from the chromatic scale spaced by fifth intervals: through that, it can be seen what are and how many are the chords and the alterations for each key.
 
-<img src="Readme_images/10.png" style="float:center"></img>
-Fig.1 Circle of fifths
+************<img src="Readme_images/circle.PNG" style="display:block, float:center">***Fig.1** Circle of fifths*
 
 Therefore, the circle of fifths is a useful tool to find the key from a chord progression. The concept behind that is to represent it as an open cylinder (Fig.2), in which on the base are located all the 12 notes from the chromatic scale spaced by fifths, and 
 on the lateral surface the chords deriving from the respective major scales’ modes, related to their key. The sorting choice through which the chords are visualized rely to the study of the circle of fifths and to the “brightness” of the mode they represent: warm colors are chosen for more brightness as well as cold ones for less brightness.  
@@ -17,9 +16,10 @@ For this version it has been decided to limit the choice of the key based only o
 
            
      
-
-		       Fig.2 Modal circle of fifths
-2. Input: keyboard and MIDI management
+	
+***Fig.2** Modal circle of fifths*
+	
+## 2. Input: keyboard and MIDI management
 
 In order to study the harmony of a chord sequence, an interface is needed to have chords as input and and so the notes. A two-octave keyboard (extendible thanks to special keys) has been chosen, which covers the octaves from C1 to C7.
 
@@ -41,14 +41,14 @@ To this point, the playNote function is called, which generates the oscillators 
 
 
 
-3. Output: visualizations
+## 3. Output: visualizations
 
 More types of music visualization has been provided, in real time or not, to show the harmonic but also typical aspects of the audio signal as a wave.
 
 
-Fig.3 Keyboard, display and frequency spectrum
+***Fig.3** Keyboard, display and frequency spectrum*
 
-3.1 real-time visualizations
+#### 3.1 real-time visualizations
 
 Once the inputs are sent, one can view:
 
@@ -60,14 +60,14 @@ Chord progression display (Fig.5): The chords on which all is based are only sev
 Once the chords are recognized, the progression is temporarily saved and another algorithm is launched with the task of finding the key corresponding to the progression: the key will be displayed in the "KEY" box.
 
 
-Fig.5 Detail of display with key
+***Fig.5** Detail of display with key*
 Keyboard and display commands:
 
 Overview of the octaves (Fig.6) that the keyboard is covering in the current state (C4-C5 by default): you can raise or lower the octave by one using
 
 
 
-Fig.6 Octaves’ overview
+***Fig.6** Octaves’ overview*
 
 volume slider: by default the volume is set to 1 but can be adjusted from 0 (slider all the way down) up to 2 (slider all up);
 
@@ -76,12 +76,12 @@ volume slider: by default the volume is set to 1 but can be adjusted from 0 (sli
 
 
 
-Fig.7 Keyboard with matching letters
+***Fig.7** Keyboard with matching letters*
 
 
 : allows you to delete the entire visualization (read the next paragraph) and to be able to re-input a new progression.
 
-3.2 Circle of fifths’ graphic implementation 
+#### 3.2 Circle of fifths’ graphic implementation 
 
 As you can see from Fig.9 there are two main boxes:
 
@@ -96,7 +96,7 @@ possible chord paths between different "neighboring" tones.
 
      
 
-Fig.9 Graphic visualization of the circle of fifths.
+***Fig.9** Graphic visualization of the circle of fifths.*
  
 The idea behind this graphical implementation derives from a schematization of the properties of the circle of fifths, which we have collected in the matrix Tab. 1.
 
@@ -107,7 +107,7 @@ Once the matrix has been generated, each cell of the matrix has been mapped with
 
 
 
-Fig.10 Graphic display of the harmonic progression
+***Fig.10** Graphic display of the harmonic progression*
 
 Fig.10 represents a dynamic graphical display of the chord progression performed.
 It is a useful visualization to better understand the time course of the chord sequence with reference to the modes of each played chord. To make this visualization possible, it is therefore necessary to have the key information of the sequence. From this, it is possible to assign the modes and display the progression of the chords according to the modes from which they derive, preserving the previous scale of colors, to indicate from warmer to the coldest the "brightness" level of the modes. Through this visualization it is therefore possible to visually analyze the eventual cadence of the progression, recognizing the most common ones.
@@ -116,19 +116,19 @@ The "CHANGE KEY" button is used to make a key switch, in case there would be mor
 
 
 
-3.4 "Relative scale" graphic implementation 
+#### 3.4 "Relative scale" graphic implementation 
  
 Once the information on the musical signal, the harmony as tonality and the progression are displayed, also the information on the melody is displayed. Once the key is obtained, in fact, red bars are shown, as shown in Fig.11 in correspondence with the keys relative to the ionic scale from which the key of the progression derives, and from which also all the scales of the other modes derive, relative to the same key.
 
 
-Fig. 11 Major relative scale highlighted on keyboard (Cmaj scale above)
+***Fig. 11** Major relative scale highlighted on keyboard (Cmaj scale above)*
 
 
-Conclusions
+# Conclusions
 
 The “circle visualizer” is a tool that can be used with educational aims for all users who approach the world of music learning, with a new visual approach, some foundations of harmony. It is a useful tool even in the phase of composition, because it provides the tools to understand the key of a progression and suggests which scale to use to compose a melody, in addition to displaying the cadence.
 
-Notes
+# Notes
 
 The languages used for the realization of this version of the project were mainly Javascript (with attached libraries like jQuery), HTML5 and CSS3 to manage the graphical interface;
 For the management of audio and MIDI signals we have relied ourselves on the Web Audio API and Web MIDI API;
