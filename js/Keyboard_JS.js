@@ -15,7 +15,7 @@ var dataArray = new Uint8Array(bufferLength);
 
 
 var gain_vec= [];
-var chord_;         //VARIABILE CHE IDENTIFICA UN SINGOLO ACCORDO E CHE VIENE SOVRASCRITTA OGNI VOLTA
+export var chord_;         //VARIABILE CHE IDENTIFICA UN SINGOLO ACCORDO E CHE VIENE SOVRASCRITTA OGNI VOLTA
 var chords_vec=[];  //VETTORE DI ACCORDI
 var midi_vec=[];    //VETTORE DI NUMERI MIDI (PER GESTIRE I RIVOLTI)
 var note_vec=[];    //VETTORE DI NOTE (PER IL RICONOSCIMENTO DELL'ACCORDO)
@@ -320,9 +320,7 @@ function getMIDImessage(midiMessage){
 function playNote(freq,on_off){
   switch(on_off){
     case 144:
-              if(gain_vec[freq]!=null){
-                return;
-              }
+
               var o = c.createOscillator();
               var g = c.createGain();
               o.type="triangle";
@@ -347,7 +345,6 @@ function playNote(freq,on_off){
 
 function releaseNote(f){
      gain_vec[f].gain.linearRampToValueAtTime(0, c.currentTime+0.5);
-     gain_vec[freq]=null;
 }
 
 

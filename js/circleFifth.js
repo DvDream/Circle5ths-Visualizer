@@ -15,6 +15,7 @@ import {stato,cancel_stato} from "./canvas.js";
 import {canvas  as canvas2,show_progression,change_progression} from "./canvas_progression.js";
 import {ctx as ctx2}  from "./canvas_progression.js";
 export var key_ = ["C","G","D","A","E","B","Gb/F#","Db/C#","Ab","Eb","Bb","F"];
+var key_minor=["Am","Em","Bm","F#m","C#m","G#m","D#m","A#m","F#m","Cm","Gm","Dm"];
 export var key_minor_arr=[];
 export var degree= [];
 var i=0;
@@ -48,6 +49,7 @@ export function findKey(c,vec1,vec2){
     for(var k=0; k<indexes.length; k++){
       var index= indexes[k];
       key_found.push(key_[index]);    //ci potrebbero essere molteplici tonalità
+      minor_relative(key_found);
 }
 
 find_degrees(stato,indexes);
@@ -149,8 +151,10 @@ export function cancel_degrees(){
 }
 
 function minor_relative(key_arr){
-
+var index;
   for(var i=0; i<key_arr.length; i++){
-
+    index=key_.indexOf(key_arr[i]);
+    key_minor_arr.push(key_minor[index]);
   }
+  console.log(key_minor_arr);
 }
