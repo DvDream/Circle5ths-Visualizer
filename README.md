@@ -17,6 +17,7 @@ For this version it has been decided to limit the choice of the key based only o
 
 <p align="center"> <img width="300" height="300" src="Readme_images/unnamed.jpg" > </p>
 <p align="center"> <strong><em>Fig.2</strong> Modal circle of fifths </em> </p>
+<br>
 
 ## 2. Input: keyboard and MIDI management
 
@@ -31,9 +32,11 @@ For what concern MIDI messages, they are managed by the Web MIDI APIs. They prov
 **getMIDImessage**: assigns two values ​​of the MIDI message to two variables: midi_number for the MIDI value of the note and on_off  for the attack (144) and release (128) values.
 The note frequency from the midi_number therefore is then calculated using the function:
 
-
+<p align="center"> <img width="180" height="40" src="Readme_images/function.png" > </p>
 
 To this point, the playNote function is called, which generates the oscillators at the determined frequency that are connected to a master volume controlled by the attack / release value.
+
+<br>
 
 ## 3. Output: visualizations
 
@@ -43,6 +46,7 @@ Several types of music visualization has been provided, in real time or not, to 
 <p align="center"> <img width="600" height="300" src="Readme_images/3.png" > </p>
 <p align="center"> <strong><em>Fig.3</strong>  Keyboard, display and frequency spectrum </em> </p>
 
+<br>
 
 #### 3.1 real-time visualizations
 
@@ -50,7 +54,7 @@ Once the inputs are sent, one can view:
 
 - the **spectrum of the input signal** (Fig.4): allows to display the fundamental frequency of each note with its harmonics, therefore also the spectrum of the chord played and also provides a visual feedback of the input acquisition;
 
-<p align="center"> <img width="300" height="300" src="Readme_images/4.png" > </p>
+<p align="center"> <img width="200" height="200" src="Readme_images/4.png" > </p>
 <p align="center"> <strong><em>Fig.4</strong> Detail of the frequency spectrum (Dm7 chord)</em></p>
 
 - **Chord progression display** (Fig.5): The chords on which all is based are only seventh chords; for this first version an algorithm is used to recognize the chord based on a dictionary created ad hoc ("dictionary.js") containing the name of the chord and an array of the four notes whose the chord is constituted (in the next versions it will be based on the distance of the intervals) as a key-value association.
@@ -75,6 +79,7 @@ Overview of the octaves (Fig.6) that the keyboard is covering in the current sta
 
 <img width="100" height="20" src="Readme_images/reset.PNG">:allows you to delete the entire visualization (read the next paragraph) and to be able to re-input a new progression.
 
+<br>
 
 #### 3.2 Circle of fifths’ graphic implementation 
 
@@ -98,8 +103,10 @@ The idea behind this graphical implementation derives from a schematization of t
 
 Once the matrix has been generated, each cell of the matrix has been mapped with a pair of values x, y in the canvas (Fig.9), equally spacing each cell. Having the name string of the chord it has been possible to implement a search algorithm within the matrix to find all the matches and create, through a “fillRect” function, the corresponding squares inside the canvas. To get the coloration, the canvas has been filled with a shade of seven colors, made visible only through the rectangles.
 
+<br>
 
 #### 3.3 Chord progressions graphic implementation
+<br>
 
 <p align="center"> <img width="250" height="350" src="Readme_images/progression.PNG" > </p>
 <p align="center"> <strong><em>Fig.10</strong> Graphic display of the harmonic progression
@@ -111,6 +118,7 @@ The realization of the arches was designed following the laws of parabolic motio
 
 The "CHANGE KEY" button is used to make a key switch, in case there would be more possible tones related to the executed sequence. In this way it will be possible to see the same sequence of chords with the new modes related to the different key.
 
+<br>
 
 #### 3.4 "Relative scale" graphic implementation 
  
@@ -120,11 +128,13 @@ Once the information on the musical signal, the harmony as tonality and the prog
 <p align="center"> <strong><em>Fig. 11</strong> Major relative scale highlighted on keyboard (Cmaj scale above)
 </em> </p>
 
+<br>
 
 ## Conclusions
 
 The “circle visualizer” is a tool that can be used with educational aims for all users who approach the world of music learning, with a new visual approach, some foundations of harmony. It is a useful tool even in the phase of composition, because it provides the tools to understand the key of a progression and suggests which scale to use to compose a melody, in addition to displaying the cadence.
 
+<br>
 
 ## Notes
 
