@@ -1,4 +1,4 @@
-# Circle-Visualizer
+<p align="center"> <img width="400" height="300" src="Readme_images/logo.png" > </p>
 
 ## 1. Behind the concept
 
@@ -43,7 +43,7 @@ Several types of music visualization has been provided, in real time or not, to 
 <p align="center"> <img width="600" height="300" src="Readme_images/3.png" > </p>
 <p align="center"> <strong><em>Fig.3</strong>  Keyboard, display and frequency spectrum </em> </p>
 
-### 3.1 real-time visualizations
+#### 3.1 real-time visualizations
 
 Once the inputs are sent, one can view:
 
@@ -74,7 +74,7 @@ Overview of the octaves (Fig.6) that the keyboard is covering in the current sta
 
 <img width="100" height="20" src="Readme_images/reset.PNG">:allows you to delete the entire visualization (read the next paragraph) and to be able to re-input a new progression.
 
-### 3.2 Circle of fifths’ graphic implementation 
+#### 3.2 Circle of fifths’ graphic implementation 
 
 As you can see from Fig.9 there are two main boxes:
 
@@ -86,7 +86,50 @@ From the table it is therefore possible to understand:
 2 - for each key, what is the function (mode) of the chord;
 3 - possible chord paths between different "neighboring" tones.
 
-<p align="center"> <img width="450" height="200" src="Readme_images/9.png" > </p>
+<p align="center"> <img width="500" height="200" src="Readme_images/canvas.png" > </p>
 <p align="center"> <strong><em>Fig.9 </strong> Graphic visualization of the circle of fifths.</em></p>
+
+The idea behind this graphical implementation derives from a schematization of the properties of the circle of fifths, which we have collected in the matrix Tab. 1
+
+<p align="center"> <img width="500" height="200" src="Readme_images/matrix.PNG" > </p>
+<p align="center"> <strong><em>Tab.1</strong> Circle of fifths’ matrix</em></p>
+
+Once the matrix has been generated, each cell of the matrix has been mapped with a pair of values x, y in the canvas (Fig.9), equally spacing each cell. Having the name string of the chord it has been possible to implement a search algorithm within the matrix to find all the matches and create, through a “fillRect” function, the corresponding squares inside the canvas. To get the coloration, the canvas has been filled with a shade of seven colors, made visible only through the rectangles.
+
+#### 3.3 Chord progressions graphic implementation
+
+<p align="center"> <img width="250" height="350" src="Readme_images/progression.PNG" > </p>
+<p align="center"> <strong><em>Fig.10</strong> Graphic display of the harmonic progression
+</em></p>
+
+Fig.10 represents a dynamic graphical display of the chord progression performed.
+It is a useful visualization to better understand the time course of the chord sequence with reference to the modes of each played chord. To make this visualization possible, it is therefore necessary to have the key information of the sequence. From this, it is possible to assign the modes and display the progression of the chords according to the modes from which they derive, preserving the previous scale of colors, to indicate from warmer to the coldest the "brightness" level of the modes. Through this visualization it is therefore possible to visually analyze the eventual cadence of the progression, recognizing the most common ones.
+The realization of the arches was designed following the laws of parabolic motion, going to map the different positions and therefore the "speed" necessary to reach a given rectangle, through the "render_prog" function.
+
+The "CHANGE KEY" button is used to make a key switch, in case there would be more possible tones related to the executed sequence. In this way it will be possible to see the same sequence of chords with the new modes related to the different key.
+
+#### 3.4 "Relative scale" graphic implementation 
+ 
+Once the information on the musical signal, the harmony as tonality and the progression are displayed, also the information on the melody is displayed. Once the key is obtained, in fact, red bars are shown, as shown in Fig.11 in correspondence with the keys relative to the ionic scale from which the key of the progression derives, and from which also all the scales of the other modes derive, relative to the same key.
+
+<p align="center"> <img width="700" height="300" src="Readme_images/10.png" > </p>
+<p align="center"> <strong><em>Fig. 11</strong> Major relative scale highlighted on keyboard (Cmaj scale above)
+</em> </p>
+
+
+## Conclusions
+
+The “circle visualizer” is a tool that can be used with educational aims for all users who approach the world of music learning, with a new visual approach, some foundations of harmony. It is a useful tool even in the phase of composition, because it provides the tools to understand the key of a progression and suggests which scale to use to compose a melody, in addition to displaying the cadence.
+
+
+
+
+## Notes
+
+- The languages used for the realization of this version of the project were mainly Javascript (with attached libraries like jQuery), HTML5 and CSS3 to manage the graphical interface;
+- For the management of audio and MIDI signals we have relied ourselves on the [Web Audio API](https://developer.mozilla.org/it/docs/Web/API/Web_Audio_API) and [Web MIDI API](https://www.smashingmagazine.com/2018/03/web-midi-api/);
+- For the musical part management the *tonal* library available at this [link](https://github.com/danigb/tonal) has been used as a support;
+- For local development and communication among the different JS libraries / modules present within the project, [*parcel*](https://en.parceljs.org/) has been used as Web application bundler, in order to manage dependencies in a practical and fast way. We recommend having [Node.js](https://en.parceljs.org/) e [Yarn](https://yarnpkg.com/) installed.
+
 
 
