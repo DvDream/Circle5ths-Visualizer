@@ -83,6 +83,8 @@ Overview of the octaves (Fig.6) that the keyboard is covering in the current sta
 
  <img width="100" height="20" src="Readme_images/keyboard_keys.PNG" >: by pressing this key, users who decide to try the keyboard through the computer can display the keys corresponding to each note (Fig.7);
  
+ <br>
+ 
 <p align="center"> <img width="450" height="100" src="Readme_images/8.png" > </p>
 <p align="center"> <strong><em>Fig.7 </strong>Keyboard with matching letters</em></p>
 
@@ -141,6 +143,8 @@ The "CHANGE KEY" button is used to make a key switch, in case there would be mor
 #### 3.4 "Relative scale" graphic implementation 
  
 Once the information on the musical signal, the harmony as tonality and the progression are displayed, also the information on the melody is displayed. Once the key is obtained, in fact, red bars are shown, as shown in Fig.11 in correspondence with the keys relative to the ionic scale from which the key of the progression derives, and from which also all the scales of the other modes derive, relative to the same key.
+
+<br>
 
 <p align="center"> <img width="700" height="300" src="Readme_images/10.png" > </p>
 <p align="center"> <strong><em>Fig. 11</strong> Major relative scale highlighted on keyboard (Cmaj scale above)
