@@ -4,6 +4,7 @@
 
 The aim of the “Circle Visualizer” project is to provide an innovative way to visualize music, highlighting the harmonic relations in a chord progression. The studies behind harmony look into the “Circle of fifths” which represent all the notes from the chromatic scale spaced by fifth intervals: through that, it can be seen what are and how many are the chords and the alterations for each key.
 
+<br>
 
 <p align="center"> <img width="300" height="300" src="Readme_images/circle.PNG" > </p>
 <p align="center"> <strong><em>Fig.1</strong> Circle of fifths</em> </p>
@@ -14,6 +15,7 @@ on the lateral surface the chords deriving from the respective major scales’ m
 
 For this version it has been decided to limit the choice of the key based only on seventh chords (major, minor, dominant, semi-diminished), as they provide more information than simple triads: for example a fifth chord, derived from the mixolydian scale, can be easily recognized with its quadriad because of  its "seventh dominant" attribute; in contrast, with the triad the information of the seventh interval is lost and remains a simple major chord which could be easily misinterpreted.
 
+<br>
 
 <p align="center"> <img width="300" height="300" src="Readme_images/unnamed.jpg" > </p>
 <p align="center"> <strong><em>Fig.2</strong> Modal circle of fifths </em> </p>
@@ -42,6 +44,7 @@ To this point, the playNote function is called, which generates the oscillators 
 
 Several types of music visualization has been provided, in real time or not, to show the harmonic but also typical aspects of the audio signal as a wave.
 
+<br>
 
 <p align="center"> <img width="600" height="300" src="Readme_images/3.png" > </p>
 <p align="center"> <strong><em>Fig.3</strong>  Keyboard, display and frequency spectrum </em> </p>
@@ -54,11 +57,15 @@ Once the inputs are sent, one can view:
 
 - the **spectrum of the input signal** (Fig.4): allows to display the fundamental frequency of each note with its harmonics, therefore also the spectrum of the chord played and also provides a visual feedback of the input acquisition;
 
+<br>
+
 <p align="center"> <img width="200" height="200" src="Readme_images/4.png" > </p>
 <p align="center"> <strong><em>Fig.4</strong> Detail of the frequency spectrum (Dm7 chord)</em></p>
 
 - **Chord progression display** (Fig.5): The chords on which all is based are only seventh chords; for this first version an algorithm is used to recognize the chord based on a dictionary created ad hoc ("dictionary.js") containing the name of the chord and an array of the four notes whose the chord is constituted (in the next versions it will be based on the distance of the intervals) as a key-value association.
 Once the chords are recognized, the progression is temporarily saved and another algorithm is launched with the task of finding the key corresponding to the progression: the key will be displayed in the "KEY" box.
+
+<br>
 
 <p align="center"> <img width="400" height="100" src="Readme_images/progressione.PNG" > </p>
 <p align="center"> <strong><em>Fig.5</strong> Detail of display with key</em></p>
@@ -66,6 +73,8 @@ Once the chords are recognized, the progression is temporarily saved and another
 **Keyboard and display commands**:
 
 Overview of the octaves (Fig.6) that the keyboard is covering in the current state (C4-C5 by default): you can raise or lower the octave by one using <img width="100" height="20" src="Readme_images/octave.PNG" >
+
+<br>
 
 <p align="center"> <img width="450" height="100" src="Readme_images/7.png" > </p>
 <p align="center"> <strong><em>Fig.6</strong>  Octaves’ overview</em></p>
@@ -89,14 +98,22 @@ On the left are arranged the modes of the major scales corresponding to each not
 The box on the right is the graphical representation of the circle of fifths: an open cylinder where in its side surface are displayed rectangles of different color according to the corresponding mode of the played chord. It is a matrix where the columns indicate the keys and the rows indicate the modes. It is possible for a chord to belong to more than one key but by assuming different functions (hence different modes): the table can display all the chord memberships, also showing multiple rectangles simultaneously. 
 
 From the table it is therefore possible to understand:
+<br>
+<br>
 1 - to which key belongs the  played chord;
+<br>
 2 - for each key, what is the function (mode) of the chord;
+<br>
 3 - possible chord paths between different "neighboring" tones.
+
+<br>
 
 <p align="center"> <img width="500" height="200" src="Readme_images/canvas.png" > </p>
 <p align="center"> <strong><em>Fig.9 </strong> Graphic visualization of the circle of fifths.</em></p>
 
 The idea behind this graphical implementation derives from a schematization of the properties of the circle of fifths, which we have collected in the matrix Tab. 1
+
+<br>
 
 <p align="center"> <img width="500" height="200" src="Readme_images/matrix.PNG" > </p>
 <p align="center"> <strong><em>Tab.1</strong> Circle of fifths’ matrix</em></p>
@@ -106,6 +123,7 @@ Once the matrix has been generated, each cell of the matrix has been mapped with
 <br>
 
 #### 3.3 Chord progressions graphic implementation
+
 <br>
 
 <p align="center"> <img width="250" height="350" src="Readme_images/progression.PNG" > </p>
