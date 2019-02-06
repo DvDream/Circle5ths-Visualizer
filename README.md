@@ -43,6 +43,7 @@ Several types of music visualization has been provided, in real time or not, to 
 <p align="center"> <img width="600" height="300" src="Readme_images/3.png" > </p>
 <p align="center"> <strong><em>Fig.3</strong>  Keyboard, display and frequency spectrum </em> </p>
 
+
 #### 3.1 real-time visualizations
 
 Once the inputs are sent, one can view:
@@ -74,6 +75,7 @@ Overview of the octaves (Fig.6) that the keyboard is covering in the current sta
 
 <img width="100" height="20" src="Readme_images/reset.PNG">:allows you to delete the entire visualization (read the next paragraph) and to be able to re-input a new progression.
 
+
 #### 3.2 Circle of fifths’ graphic implementation 
 
 As you can see from Fig.9 there are two main boxes:
@@ -96,6 +98,7 @@ The idea behind this graphical implementation derives from a schematization of t
 
 Once the matrix has been generated, each cell of the matrix has been mapped with a pair of values x, y in the canvas (Fig.9), equally spacing each cell. Having the name string of the chord it has been possible to implement a search algorithm within the matrix to find all the matches and create, through a “fillRect” function, the corresponding squares inside the canvas. To get the coloration, the canvas has been filled with a shade of seven colors, made visible only through the rectangles.
 
+
 #### 3.3 Chord progressions graphic implementation
 
 <p align="center"> <img width="250" height="350" src="Readme_images/progression.PNG" > </p>
@@ -107,6 +110,7 @@ It is a useful visualization to better understand the time course of the chord s
 The realization of the arches was designed following the laws of parabolic motion, going to map the different positions and therefore the "speed" necessary to reach a given rectangle, through the "render_prog" function.
 
 The "CHANGE KEY" button is used to make a key switch, in case there would be more possible tones related to the executed sequence. In this way it will be possible to see the same sequence of chords with the new modes related to the different key.
+
 
 #### 3.4 "Relative scale" graphic implementation 
  
@@ -120,8 +124,6 @@ Once the information on the musical signal, the harmony as tonality and the prog
 ## Conclusions
 
 The “circle visualizer” is a tool that can be used with educational aims for all users who approach the world of music learning, with a new visual approach, some foundations of harmony. It is a useful tool even in the phase of composition, because it provides the tools to understand the key of a progression and suggests which scale to use to compose a melody, in addition to displaying the cadence.
-
-
 
 
 ## Notes
