@@ -206,7 +206,7 @@ p1 {
   border-radius: 5px;
   position: relative;
   margin: auto;
-  left:1053px;
+  left:1073px;
   bottom:50px;
 }
 
@@ -229,7 +229,7 @@ input[type=range] {
   margin: 10px 0;
   width: 150px;
   position: absolute;
-  left:1050px;
+  left:1069px;
   transform: rotate(-90deg);
   bottom: 408px;
   border-radius: 20px;
@@ -485,7 +485,7 @@ span{
 .vol{
   background-color: #dddddd00;
     display: inline-block;
-    left: 1081px;
+    left: 1098px;
     position: absolute;
     top: 468px;
     color: #12deb5;
