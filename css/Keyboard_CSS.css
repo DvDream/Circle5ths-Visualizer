@@ -483,12 +483,14 @@ span{
 }
 
 .vol{
-  background-color: #dddddd00;
-    display: inline-block;
+  display: inline-block;
     left: 1098px;
     position: absolute;
-    top: 468px;
+    top: 472px;
     color: #12deb5;
     font-size: 1.3rem;
     font-family: 'VT323';
+    background-color: #312e2e;
+    border-radius: 3.2px;
+
 }
