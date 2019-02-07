@@ -4,6 +4,7 @@ var midi;
 var c = new AudioContext();
 var analyser = c.createAnalyser();
 var volume_master= c.createGain();
+volume_master.gain.value=0.5;
 var chiave;
 volume_master.connect(c.destination);
 
@@ -330,7 +331,7 @@ function playNote(freq,on_off){
               o.frequency.value = freq;
               g.gain.value=0;
               //g.gain.setValueAtTime(0, c.currentTime);
-              g.gain.linearRampToValueAtTime(1, c.currentTime+0.5); //Problematica: se il testo viene premuto e rilasciato subito, il suono continua all'infinito. AGGIUSTARE QUEST'ASPETTO
+              g.gain.linearRampToValueAtTime(0.8, c.currentTime); //Problematica: se il testo viene premuto e rilasciato subito, il suono continua all'infinito. AGGIUSTARE QUEST'ASPETTO
               g.gain.linearRampToValueAtTime(0.6, c.currentTime+0.4);
               o.start();
               gain_vec[freq]=g;
