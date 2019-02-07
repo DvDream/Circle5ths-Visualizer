@@ -1,4 +1,4 @@
-<p align="center"> <img width="400" height="300" src="Readme_images/logo.png" > </p>
+<p align="center"> <img width="450" height="300" src="Readme_images/logo.png" > </p>
 
 ## 1. Behind the concept
 
