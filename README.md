@@ -164,6 +164,10 @@ The “circle visualizer” is a tool that can be used with educational aims for
 - For the management of audio and MIDI signals we have relied ourselves on the [Web Audio API](https://developer.mozilla.org/it/docs/Web/API/Web_Audio_API) and [Web MIDI API](https://www.smashingmagazine.com/2018/03/web-midi-api/);
 - For the musical part management the *tonal* library available at this [link](https://github.com/danigb/tonal) has been used as a support;
 - For local development and communication among the different JS libraries / modules present within the project, [*parcel*](https://en.parceljs.org/) has been used as Web application bundler, in order to manage dependencies in a practical and fast way. We recommend having [Node.js](https://en.parceljs.org/) e [Yarn](https://yarnpkg.com/) installed.
+- Project available at this [link](https://circle5ths-visualizer.netlify.com/)
 
 
+Developed by:
 
+- Davide Mori: davide2.mori@mail.polimi.it
+- Francesco Pino: francesco1.pino@mail.polimi.it
