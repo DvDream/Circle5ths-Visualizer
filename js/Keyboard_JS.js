@@ -237,10 +237,10 @@ document.onkeydown = function(e) {
   var keypressed=key.indexOf(e.key)
 //  console.log(keypressed)
   document.getElementById(keypressed).classList.toggle("clicked");
-  playNote(Math.pow(2,(keypressed-9+octave_step)/12)*440, 144);
+  playNote(Math.pow(2,(keypressed-9+octave_step)/12)*440, 144,1);
   setTimeout(timeOut, 2000);
    var midi_num = [keypressed+octave_step+60];
-   detect_chord (midi_num);
+   detect_chord(midi_num);
   }
 }
 
@@ -248,9 +248,10 @@ document.onkeydown = function(e) {
 document.onkeyup= function(e) {
   if(!e.repeat){
 //    console.log("Hai rilasciato", key.indexOf(e.key) )
-  var keypressed=key.indexOf(e.key)
-  document.getElementById(keypressed).classList.toggle("clicked");
-  playNote(Math.pow(2,(keypressed-9+octave_step)/12)*440,128);
+  var keyreleased=key.indexOf(e.key);
+  console.log(Math.pow(2,(keyreleased-9+octave_step)/12)*440);
+  document.getElementById(keyreleased).classList.toggle("clicked");
+  playNote(Math.pow(2,(keyreleased-9+octave_step)/12)*440,144,0);
 }
 }
 
@@ -267,13 +268,13 @@ function clickOnRect(data) {
   //console.log(data)
   var id = data.path[0].id;
   document.getElementById(id).classList.toggle("clicked");
-  playNote(Math.pow(2,((id)-9+octave_step)/12)*440, 144);
+  playNote(Math.pow(2,((id)-9+octave_step)/12)*440, 144,1);
 }
 function clickOffRect(data) {
   //console.log(data)
   var id = data.path[0].id;
   document.getElementById(id).classList.toggle("clicked");
-  playNote(Math.pow(2,((id)-9+octave_step)/12)*440, 128);
+  playNote(Math.pow(2,((id)-9+octave_step)/12)*440, 144,0);
 }
 
 //GESTIONE MIDI IN INGRESSO
@@ -301,14 +302,15 @@ function onMIDISuccess(midiAccess) {
 
 function getMIDImessage(midiMessage){
     var on_off = midiMessage.data[0];
+  //  console.log(midiMessage.data);
     var midi_number = midiMessage.data[1];
-    console.log(midi_number);
+var velocity= midiMessage.data[2];
     //console.log(on_off);
     var f= Math.pow(2,(midi_number-69)/12)*440
     document.getElementById(midi_number-60-octave_step).classList.toggle("clicked");
-    playNote(f, on_off);
+    playNote(f, on_off,velocity);
     setTimeout(timeOut, 2000);
-    if(on_off==144){
+    if(on_off===144 & velocity!=0){
     detect_chord(midi_number);
     }
     else{
@@ -318,9 +320,8 @@ function getMIDImessage(midiMessage){
 
 
 
-function playNote(freq,on_off){
-  switch(on_off){
-    case 144:
+function playNote(freq,on_off,vel){
+if(on_off===144 & vel!=0){
 
               var o = c.createOscillator();
               var g = c.createGain();
@@ -330,22 +331,28 @@ function playNote(freq,on_off){
               volume_master.connect(analyser);
               o.frequency.value = freq;
               g.gain.value=0;
-              //g.gain.setValueAtTime(0, c.currentTime);
-              g.gain.linearRampToValueAtTime(0.8, c.currentTime); //Problematica: se il testo viene premuto e rilasciato subito, il suono continua all'infinito. AGGIUSTARE QUEST'ASPETTO
+              g.gain.linearRampToValueAtTime(0.8, c.currentTime);
               g.gain.linearRampToValueAtTime(0.6, c.currentTime+0.4);
               o.start();
               gain_vec[freq]=g;
               drawSamples();
-              break;
-    case 128:
+            }
+    /*case 128:
               releaseNote(freq);
-              break;
+              break;*/
+  else{
+    releaseNote(freq);
+
   }
+
 }
 
 
 function releaseNote(f){
+console.log(gain_vec[f]);
      gain_vec[f].gain.linearRampToValueAtTime(0, c.currentTime+0.5);
+     gain_vec[f]=null;
+
 }
 
 
