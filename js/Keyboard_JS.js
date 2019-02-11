@@ -249,7 +249,7 @@ document.onkeyup= function(e) {
   if(!e.repeat){
 //    console.log("Hai rilasciato", key.indexOf(e.key) )
   var keyreleased=key.indexOf(e.key);
-  console.log(Math.pow(2,(keyreleased-9+octave_step)/12)*440);
+  //console.log(Math.pow(2,(keyreleased-9+octave_step)/12)*440);
   document.getElementById(keyreleased).classList.toggle("clicked");
   playNote(Math.pow(2,(keyreleased-9+octave_step)/12)*440,144,0);
 }
@@ -349,7 +349,7 @@ if(on_off===144 & vel!=0){
 
 
 function releaseNote(f){
-console.log(gain_vec[f]);
+//console.log(gain_vec[f]);
      gain_vec[f].gain.linearRampToValueAtTime(0, c.currentTime+0.5);
      gain_vec[f]=null;
 
